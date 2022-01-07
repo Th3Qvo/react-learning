@@ -1,20 +1,14 @@
 /** w kazdym pliku react trzeba importować bibliotekę react */
 import React from 'react';
 import styles from './Card.scss';
-import PropTypes from 'propTypes';
+import PropTypes from 'prop-types';
 
-class Card extends React.Component {
-  static propTypes = {
-    title: PropTypes.node,
-  }
+const Card = props => (
+  <p className={styles.component}> {props.title} </p>
+);
 
-  render() {
-    return (
-      <div className={styles.component}>
-        {this.props.title}
-      </div>
-    )
-  }
-}
+Card.propTypes = {
+  title: PropTypes.node,
+};
 
 export default Card;
