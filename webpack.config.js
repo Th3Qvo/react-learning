@@ -1,18 +1,19 @@
+/** w konfiguracji webpacka uzywamy require zamiast inport, pozwalają one na wykorzystanie pakietów npm */
 const path = require('path');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const baseConfig = () => ({
-  /** entry - path to main JS file */
+  /** główny plik z kodem */
   entry: './src/index.js',
-  /** output - path to generated production version of this project */
+  /** miejsce, w którym ma zostać wygenereowana wersja prod za pomocą npm run build */
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'scripts_bundle.js',
   },
   devtool: 'source-map',
-  /** module - config for different types of files */
+  /** konfiguracja dla plików */
   module: {
     rules: [
       {
@@ -24,7 +25,7 @@ const baseConfig = () => ({
       },
     ],
   },
-  /** plugins needed in this project */
+  /** lista wtyczek niezbędnych w aplikacji */
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
@@ -80,6 +81,7 @@ const prodConfig = () => ({
   ],
 });
 
+/** eksportuje ustawienia łącząc odpowiednie konfiguracje dla danego trybu */
 module.exports = (env, argv) => {
   const modeConfig = argv.mode == 'production' ? prodConfig : devConfig;
 
