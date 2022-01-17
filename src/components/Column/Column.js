@@ -11,13 +11,13 @@ import Icon from '../Icon/Icon';
 class Column extends React.Component {
   state = {
     cards: this.props.cards || [],
-  }
+  };
 
   static propTypes = {
     title: PropTypes.string.isRequired,
     icon: PropTypes.node,
     cards: PropTypes.array,
-  }
+  };
 
   addCard(title) {
     this.setState(state => (
@@ -27,8 +27,8 @@ class Column extends React.Component {
           {
             key: state.cards.length ? state.cards[state.cards.length - 1].key + 1 : 0,
             title,
-          }
-        ]
+          },
+        ],
       }
     ));
   }
@@ -46,7 +46,7 @@ class Column extends React.Component {
           <Creator text={settings.cardCreatorText} action={title => this.addCard(title)} />
         </div>
       </section>
-    )
+    );
   }
 }
 
