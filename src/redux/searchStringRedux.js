@@ -1,10 +1,16 @@
 // selectors
+export const getSearchString = (state) => state.searchString;
+
+export const countVisibleCards = ({ cards, searchString }) => cards.filter(card => new RegExp(searchString, 'i').test(card.title)).length;
+
+export const countAllCards = ({ cards }) => cards.length;
 
 // action name creator
 
 // actions types
 
 // action creators
+export const createAction_changeSearchString = payload => payload;
 
 // reducer
 export default function reducer(statePart = '', action = {}) {
