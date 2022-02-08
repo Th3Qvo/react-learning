@@ -10,7 +10,11 @@ const baseConfig = () => ({
   /** miejsce, w którym ma zostać wygenereowana wersja prod za pomocą npm run build */
   output: {
     path: path.join(__dirname, 'dist'),
+    publicPath: '/',
     filename: 'scripts_bundle.js',
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   devtool: 'source-map',
   /** konfiguracja dla plików */
