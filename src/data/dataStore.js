@@ -12,6 +12,14 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+  navbar: {
+    icon: 'dog',
+  },
+  compInfo: {
+    title: 'Info',
+    image: 'https://images.unsplash.com/photo-1597484661973-ee6cd0b6482c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3348&q=80',
+    infoContent: 'This is my first React project I have ever made.',
+  },
 };
 
 export const pageContents = {
