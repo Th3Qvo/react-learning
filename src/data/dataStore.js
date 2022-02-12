@@ -15,10 +15,16 @@ export const settings = {
   navbar: {
     icon: 'dog',
   },
-  compInfo: {
+  info: {
     title: 'Info',
     image: 'https://images.unsplash.com/photo-1597484661973-ee6cd0b6482c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3348&q=80',
     infoContent: 'This is my first React project I have ever made.',
+  },
+  FAQ: {
+    title: 'FAQ',
+    image: 'https://images.unsplash.com/photo-1597484661973-ee6cd0b6482c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3348&q=80',
+    questions: 'Soon, you may find here some FAQ.',
+    answers: 'And answers as well.',
   },
 };
 

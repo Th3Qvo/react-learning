@@ -6,8 +6,8 @@ import Hero from '../Hero/Hero';
 
 const Info = () => (
   <Container>
-    <Hero titleText={settings.compInfo.title} imageBGI={settings.compInfo.image} />
-    <p>{settings.compInfo.infoContent}</p>
+    <Hero titleText={settings.info.title} imageBGI={settings.info.image} />
+    <p>{settings.info.infoContent}</p>
   </Container>
 );
 
