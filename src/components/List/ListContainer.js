@@ -9,7 +9,7 @@ const mapStateToProps = (state, props) => {
 
   return {
     ...listParams,
-    columns: getColumnsForList(state, id),
+    columns: getColumnsForList(state, props.id),
   };
 };
 

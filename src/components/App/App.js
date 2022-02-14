@@ -6,7 +6,7 @@ import MainLayout from '../MainLayout/MainLayout';
 import FAQ from '../FAQ/FAQ';
 import { AnimatedSwitch } from 'react-router-transition';
 import styles from './App.scss';
-import List from '../List/List';
+import List from '../List/ListContainer';
 
 const App = () => (
   <BrowserRouter>
