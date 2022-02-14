@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
-import { getCardsForSearchResults } from '../../redux/cardsRedux';
-import SearchResults from './SearchResults';
+import { getCardsForSearchResult } from '../../redux/cardsRedux';
+import SearchResult from './SearchResult';
 
 const mapStateToProps = (state, props) => {
   const cardId = props.match.params.cardId;
 
   return {
-    cards: getCardsForSearchResults(state, cardId),
+    cards: getCardsForSearchResult(state, cardId),
   };
 };
 
-export default connect(mapStateToProps)(SearchResults);
+export default connect(mapStateToProps)(SearchResult);

@@ -1,11 +1,11 @@
 /** w kazdym pliku react trzeba importować bibliotekę react */
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../Column/Column.scss';
+import styles from './SearchResult.scss';
 import Card from '../Card/Card';
 import { settings } from '../../data/dataStore';
 
-class SearchResults extends React.Component {
+class SearchResult extends React.Component {
 
   static propTypes = {
     cards: PropTypes.array,
@@ -31,4 +31,4 @@ class SearchResults extends React.Component {
   }
 }
 
-export default SearchResults;
+export default SearchResult;
