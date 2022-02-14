@@ -1,16 +1,13 @@
 /** w kazdym pliku react trzeba importować bibliotekę react */
 import React from 'react';
-import styles from './SearchResult.scss';
 import PropTypes from 'prop-types';
+import styles from '../Column/Column.scss';
 import Card from '../Card/Card';
 import { settings } from '../../data/dataStore';
-import Icon from '../Icon/Icon';
 
+class SearchResults extends React.Component {
 
-class Column extends React.Component {
   static propTypes = {
-    title: PropTypes.string.isRequired,
-    icon: PropTypes.node,
     cards: PropTypes.array,
   };
 
@@ -19,11 +16,12 @@ class Column extends React.Component {
   };
 
   render() {
-    const { title, icon, cards } = this.props;
+    const { cards } = this.props;
+
     return (
       <section className={styles.component}>
-        <h3 className={styles.title}> <span className={styles.icon}><Icon name={icon} /></span>{title} </h3>
-        <div>
+
+        <div className={styles.cards}>
           {cards.map(cardData => (
             <Card key={cardData.id} {...cardData} />
           ))}
@@ -33,4 +31,4 @@ class Column extends React.Component {
   }
 }
 
-export default Column;
+export default SearchResults;
