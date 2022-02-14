@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Search.scss';
 import Button from '../Button/Button';
+import PropTypes from 'prop-types';
 import Icon from '../Icon/Icon';
 import { settings } from '../../data/dataStore';
-import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 class Search extends React.Component {
